@@ -46,9 +46,8 @@ jobs:
           
           git commit -m "${arr[$rand]}"
           
-      - name: Push Back
-        uses: ad-m/github-push-action@v0.5.0
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.6.0
         with:
-          force: true
-          directory: '.'
+          directory: "."
           github_token: ${{ secrets.GITHUB_TOKEN }}
